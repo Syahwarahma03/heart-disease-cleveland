@@ -37,10 +37,19 @@ st.markdown(
     <style>
     .stApp {
         background-color: #FFF8F7;
+        color: #3D1E26;
     }
     section[data-testid="stSidebar"] {
         background-color: #FDECEF;
         border-right: 1px solid #F8D7DA;
+    }
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] span,
+    section[data-testid="stSidebar"] label,
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3 {
+        color: #4A232D !important;
     }
     .kpi-card {
         background-color: #FFFFFF;
@@ -53,34 +62,35 @@ st.markdown(
     }
     .kpi-title {
         font-size: 0.85rem;
-        color: #7A4B56;
+        color: #7A4B56 !important;
         font-weight: 600;
         margin-bottom: 6px;
     }
     .kpi-value {
         font-size: 1.65rem;
-        color: #D9778A;
+        color: #D9778A !important;
         font-weight: 700;
     }
     .kpi-sub {
         font-size: 0.78rem;
-        color: #9E6B76;
+        color: #9E6B76 !important;
         margin-top: 4px;
     }
     .info-banner {
         background-color: #FFFFFF;
+        color: #3D1E26 !important;
         border-left: 5px solid #E88C9B;
         border-radius: 10px;
         padding: 15px 20px;
         margin-bottom: 18px;
         box-shadow: 0 2px 8px rgba(217, 119, 138, 0.06);
     }
-    h1, h2, h3 {
-        color: #5C2B35;
+    h1, h2, h3, [data-testid="stMarkdownContainer"] p, label {
+        color: #4A232D !important;
     }
     div.stButton > button, div.stFormSubmitButton > button {
         background-color: #E88C9B;
-        color: white;
+        color: #FFFFFF !important;
         border: none;
         border-radius: 10px;
         padding: 0.55rem 1.2rem;
@@ -88,7 +98,7 @@ st.markdown(
     }
     div.stButton > button:hover, div.stFormSubmitButton > button:hover {
         background-color: #D9778A;
-        color: white;
+        color: #FFFFFF !important;
     }
     </style>
     """,

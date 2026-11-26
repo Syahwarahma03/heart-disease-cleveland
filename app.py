@@ -57,7 +57,8 @@ st.markdown(
     h1, h2, h3, h4, p, li, label,
     [data-testid="stMarkdownContainer"] p,
     section[data-testid="stSidebar"] span,
-    section[data-testid="stSidebar"] p {
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] div {
         color: #4A232D !important;
     }
 
@@ -188,11 +189,31 @@ st.markdown(
     }
     .sidebar-footer {
         background-color: #FFFFFF;
-        border: 1px solid #F8D7DA;
-        border-radius: 10px;
-        padding: 12px 14px;
-        font-size: 0.82rem;
+        border: 1.5px solid #F8D7DA;
+        border-top: 4px solid #E88C9B;
+        border-radius: 12px;
+        padding: 14px 14px;
+        font-size: 0.80rem;
+        line-height: 1.5;
+        color: #4A232D !important;
+        box-shadow: 0 2px 8px rgba(217, 119, 138, 0.07);
+    }
+    .sidebar-footer .team-title {
+        font-weight: 700;
         color: #5C2B35 !important;
+        font-size: 0.85rem;
+    }
+    .sidebar-footer .team-sub {
+        color: #7A4B56 !important;
+        font-size: 0.78rem;
+        margin-bottom: 8px;
+    }
+    .sidebar-footer .section-label {
+        font-weight: 700;
+        color: #D9778A !important;
+        margin-top: 8px;
+        margin-bottom: 3px;
+        font-size: 0.79rem;
     }
 
     /* Tombol Pink */
@@ -480,6 +501,40 @@ def page_beranda():
                 <span class="step-badge">4. Modelling</span>
                 <p style="font-size:0.88rem; margin:0;">
                 Lima algoritma klasifikasi dievaluasi dengan metrik <i>Accuracy, F1-Score, ROC-AUC,</i> dan validasi silang.
+                </p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    st.markdown("---")
+    st.subheader("Informasi Kelompok & Dosen Pengampu")
+
+    col_team, col_lect = st.columns([1.4, 1])
+    with col_team:
+        st.markdown(
+            """
+            <div class="content-box" style="border-left: 5px solid #E88C9B;">
+                <span class="step-badge">Anggota Kelompok 2</span>
+                <ol style="margin: 4px 0 0 0; padding-left: 20px; line-height: 1.8;">
+                    <li><b>Haifa Auliatul Pynkan</b> — NIM : <code>241011401848</code></li>
+                    <li><b>Rahma Dika Yhustira</b> — NIM : <code>241011402308</code></li>
+                    <li><b>Syahwa Rahma Andini</b> — NIM : <code>241011402529</code></li>
+                </ol>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+    with col_lect:
+        st.markdown(
+            """
+            <div class="content-box" style="border-left: 5px solid #D9778A;">
+                <span class="step-badge">Dosen Pengampu</span>
+                <p style="margin: 6px 0 4px 0; font-size: 1.02rem;">
+                    <b>Farizi Ilham S.Kom., M.Kom</b>
+                </p>
+                <p style="margin: 0; font-size: 0.88rem; color: #7A4B56 !important;">
+                    Program Studi Teknik Informatika<br>Universitas Pamulang
                 </p>
             </div>
             """,
@@ -1281,8 +1336,14 @@ with st.sidebar:
     st.markdown(
         """
         <div class="sidebar-footer">
-            <b>Tugas Machine Learning - Kelompok 2</b><br>
-            Informatika, Universitas Pamulang
+            <div class="team-title">Tugas Machine Learning - Kelompok 2</div>
+            <div class="team-sub">Informatika, Universitas Pamulang</div>
+            <div class="section-label">Anggota Kelompok:</div>
+            <div>1. Haifa Auliatul Pynkan<br>&nbsp;&nbsp;&nbsp;&nbsp;NIM : 241011401848</div>
+            <div>2. Rahma Dika Yhustira<br>&nbsp;&nbsp;&nbsp;&nbsp;NIM : 241011402308</div>
+            <div>3. Syahwa Rahma Andini<br>&nbsp;&nbsp;&nbsp;&nbsp;NIM : 241011402529</div>
+            <div class="section-label">Dosen Pengampu:</div>
+            <div>Farizi Ilham S.Kom., M.Kom</div>
         </div>
         """,
         unsafe_allow_html=True,
